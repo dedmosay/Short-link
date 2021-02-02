@@ -99,3 +99,11 @@ app.use(express.json( {extended: true}))        // теперь req.body явл�
 ...
 ```
 
+Переменные окружения 
+npm install --save-dev cross-env
+
+https://www.npmjs.com/package/cross-env
+
+```js
+"build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js"
+```

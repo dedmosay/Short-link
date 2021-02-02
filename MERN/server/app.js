@@ -4,12 +4,21 @@ const express = require("express");
 const config = require("config");
 const mongoose = require("mongoose");
 const app = express();
+const path = require('path');
 
 app.use(express.json( {extended: true}))
 
 app.use("/api/auth/", require("./routes/auth.routes"));
 
 const PORT = config.get("port") || 5000;
+
+if(process.env.NODE_ENV === 'production') {
+    app.use('/', express.static(path.join(__dirname, '../client', 'build')));
+
+    app.get('*', function (req, res) {
+        res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'))
+    })
+}
 
 async function start() {
     try{
