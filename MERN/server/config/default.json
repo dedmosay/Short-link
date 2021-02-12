@@ -1,5 +1,5 @@
 {
     "mongoUri": "mongodb+srv://ilinoa:pNzeaLJhb93y6PW@cluster0.pjxs1.mongodb.net/app?retryWrites=true&w=majority",
-    "port": 80,
-    "jwtSecret": "ilin oleg"   
+    "port": 5000,
+    "jwtSecret": "ilin oleg"
 }
