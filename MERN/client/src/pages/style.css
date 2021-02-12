@@ -1,0 +1,41 @@
+.videos {
+    width: 500px;
+    height: 380px;
+    margin: 3px auto;
+    border: 1px solid #cacaca;
+    position: relative;
+    
+}
+input {
+    color: #cacaca;
+}
+.inter-block {
+    margin-left: 20px;
+    color: seagreen;
+}
+.inter {
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.my-video {
+    width: 130px;
+    position: absolute;
+    left:10px;
+    bottom: 10px;
+    border: 2px solid #cacaca;
+    box-shadow: 1px 1px 11px#cacaca;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.user-video{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
