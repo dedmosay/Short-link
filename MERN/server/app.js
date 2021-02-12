@@ -8,16 +8,17 @@ app.use(express.json( {extended: true}))
 
 app.use("/api/auth/", require("./routes/auth.routes"));
 
-const PORT = 80;
+const PORT = 5000;
 
-
-if(true) {
+/*
+if(PORT === 80) {
     app.use('/', express.static(path.join(__dirname, '../client', 'build')));
 
     app.get('*', function (req, res) {
         res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'))
     })
 }
+*/
 
 async function start() {
     try{
