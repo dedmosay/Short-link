@@ -11,10 +11,7 @@ export const CreatePage = () => {
     const NEW_CLIENT_CONNECT = 'NEW_CLIENT_CONNECT';
     const SOMEONE_DISCONNECTED = 'SOMEONE_DISCONNECTED';
 
-    const LOCAL = "http://localhost:5000/";
-    const HEROKU_H = "home-learning.herokuapp.com";
-
-    const socket = io(HEROKU_H); 
+    const socket = io("home-learning.herokuapp.com"); 
 
     const CONFIG_PEER = {
         host: 'jkq.herokuapp.com',
@@ -102,7 +99,8 @@ export const CreatePage = () => {
                                     <video  id="friendStream" className="user-video"></video>
                                 </div>
                                 <br></br>
-                                <input type="text" placeholder="Чтобы позвонить преподавателю, вставьте его ID" id="txtFrienId"></input>
+                                <p>ID пользователя: </p> 
+                                <input type="text"  id="txtFrienId"></input>
                                 <br></br>
                                 <input type="submit" onClick={()=>btnCall()} value="Вызов" />
                             </div>
@@ -120,15 +118,3 @@ export const CreatePage = () => {
             </div>
     )
 }
-
-
-
-// import React from 'react';
-
-// export const CreatePage = () => {
-//     return (
-//         <div>
-//             <h1>Create Page</h1>
-//         </div>
-//     )
-// }
